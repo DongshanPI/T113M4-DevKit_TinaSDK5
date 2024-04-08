@@ -1,0 +1,20 @@
+#!/bin/sh
+
+echo "------run rc.final file-----"
+
+if [ x${boot_partition} == xboot ];then 
+	amixer cset name="Headphone Switch" 1
+	cat /sys/devices/platform/soc@3000000/soc@3000000:usbc0@0/usb_device
+else
+	cat /sys/devices/platform/soc@3000000/soc@3000000:usbc0@0/usb_device
+	export swu_software=$(fw_printenv -n swu_software 2>/dev/null)
+	export swu_mode=$(fw_printenv -n swu_mode 2>/dev/null)
+fi
+if [ -e /tmp/private/ ]; then 
+	echo "clear private mount info"
+	umount /tmp/private/
+	rm -rf /tmp/private
+	ubiblock -r /dev/by-name/private
+fi
+
+
