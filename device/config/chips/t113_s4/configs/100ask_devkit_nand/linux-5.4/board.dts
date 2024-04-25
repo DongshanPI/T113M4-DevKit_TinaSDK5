@@ -219,8 +219,17 @@
 		compatible = "allwinner,sun8i-awlink";
 		device_type = "awlink0";
 		id = <0>;
-		status = "disabled";
+		status = "okay";
 	};
+        awlink1: awlink@0x1 {
+                #address-cells = <1>;
+                #size-cells = <0>;
+                compatible = "allwinner,sun8i-awlink";
+                device_type = "awlink1";
+                id = <1>;
+                status = "okay";
+        };
+
 };
 
 &cpu0 {
@@ -354,16 +363,16 @@
 	};
 
 	uart2_pins_a: uart2_pins@0 {  /* For EVB1 board */
-        pins = "PE2", "PE3";
-        function = "uart2";
-        drive-strength = <10>;
-        bias-pull-up;
-    };
+	        pins = "PE2", "PE3";
+        	function = "uart2";
+	        drive-strength = <10>;
+        	bias-pull-up;
+	    };
 
-    uart2_pins_b: uart2_pins@1 {  /* For EVB1 board */
-        pins = "PE2", "PE3";
-        function = "gpio_in";
-    };
+	uart2_pins_b: uart2_pins@1 {  /* For EVB1 board */
+        	pins = "PE2", "PE3";
+	        function = "gpio_in";
+	    };
 
 	uart3_pins_a: uart3_pins@0 {  /* For t113_evb */
 		pins = "PB6", "PB7";
@@ -376,6 +385,20 @@
 		pins = "PB6", "PB7";
 		function = "gpio_in";
 	};
+
+
+        uart4_pins_a: uart4_pins@0 {  
+                pins = "PE4", "PE5";
+                function = "uart4";
+                drive-strength = <10>;
+                bias-pull-up;
+        };
+
+        uart4_pins_b: uart4_pins@1 {  
+                pins = "PE4", "PE5";
+                function = "gpio_in";
+        };
+
 
 	twi0_pins_a: twi0@0 {
 		pins = "PB2", "PB3";
@@ -400,13 +423,13 @@
 	};
 
 	twi2_pins_a: twi2@0 {
-		pins = "PG6", "PG7";
+		pins = "PE12", "PE13";
 		function = "twi2";
 		drive-strength = <10>;
 	};
 
 	twi2_pins_b: twi2@1 {
-		pins = "PG6", "PG7";
+		pins = "PE12", "PE13";
 		function = "gpio_in";
 	};
 
@@ -728,7 +751,7 @@
 	pinctrl-names = "default", "sleep";
 	pinctrl-0 = <&uart2_pins_a>;
 	pinctrl-1 = <&uart2_pins_b>;
-	status = "disabled";
+	status = "okay";
 };
 
 &uart3 {
@@ -737,6 +760,14 @@
 	pinctrl-1 = <&uart3_pins_b>;
 	status = "okay";
 };
+
+&uart4 {
+        pinctrl-names = "default", "sleep";
+        pinctrl-0 = <&uart4_pins_a>;
+        pinctrl-1 = <&uart4_pins_b>;
+        status = "okay";
+};
+
 
 &sdc2 {
 	non-removable;
@@ -815,22 +846,6 @@
 	dmas = <&dma 43>, <&dma 43>;
 	dma-names = "tx", "rx";
 	status = "disabled";
-	ctp@14 {
-        compatible = "allwinner,goodix";
-        device_type = "ctp";
-        reg = <0x14>;
-        status = "okay";
-        ctp_name = "gt9xxnew_ts";
-        ctp_twi_id = <0x2>;
-        ctp_twi_addr = <0x14>;
-        ctp_screen_max_x = <480>;
-        ctp_screen_max_y = <480>;
-        ctp_revert_x_flag = <0x0>;
-        ctp_revert_y_flag = <0x0>;
-        ctp_exchange_x_y_flag = <0x0>;
-        ctp_int_port = <&pio PB 5 GPIO_ACTIVE_HIGH>;
-        ctp_wakeup = <&pio PB 4 GPIO_ACTIVE_HIGH>;
-	};
 };
 
 &twi1 {
@@ -841,21 +856,31 @@
 	status = "disabled";
 };
 
-&twi2 {
-	clock-frequency = <400000>;
-	pinctrl-0 = <&twi2_pins_a>;
-	pinctrl-1 = <&twi2_pins_b>;
-	pinctrl-names = "default", "sleep";
-	twi_drv_used = <1>;
-	dmas = <&dma 45>, <&dma 45>;
-	dma-names = "tx", "rx";
-	status = "disabled";
+&twi2 { 
+        clock-frequency = <400000>;
+        pinctrl-0 = <&twi2_pins_a>;
+        pinctrl-1 = <&twi2_pins_b>;
+        pinctrl-names = "default", "sleep";
+        dmas = <&dma 45>, <&dma 45>;
+        dma-names = "tx", "rx";
+        status = "okay";
 
-	pcf8563: pcf8563@51 {
-		compatible = "nxp,pcf8563";
-		reg = <0x51>;
-		status = "okay";
-	};
+        ctp@14 {
+                compatible = "allwinner,goodix";
+                device_type = "ctp";
+                reg = <0x14>;
+                status = "okay";
+                ctp_name = "gt9xxnew_ts";
+                ctp_twi_id = <0x2>;
+                ctp_twi_addr = <0x14>;
+                ctp_screen_max_x = <0x400>;
+                ctp_screen_max_y = <0x258>;
+                ctp_revert_x_flag = <0x0>;
+                ctp_revert_y_flag = <0x0>;
+                ctp_exchange_x_y_flag = <0x0>;
+                ctp_int_port = <&pio PE 1 GPIO_ACTIVE_HIGH>;
+                ctp_wakeup = <&pio PE 0 GPIO_ACTIVE_HIGH>;
+        };
 };
 
 &twi3 {
@@ -1322,6 +1347,49 @@ pull up or pull down(default 0), driver level(default 1), data>
 ;For lvds0: use lvds0_pins_a  and lvds0_pins_b instead
 ;----------------------------------------------------------------------------------*/
 &lcd0 {
+	
+	/* part 1 */
+	lcd_used            = <1>;
+	lcd_driver_name     = "default_lcd";
+	lcd_backlight	    = <100>;
+	/* part 2 */
+	lcd_if = <0>;
+	lcd_hv_if = <0>;
+	/* part 3 */
+	lcd_x               = <1024>;
+	lcd_y               = <600>;
+	lcd_width           = <154>;
+	lcd_height          = <85>;
+	lcd_dclk_freq       = <51>;
+	lcd_hbp             = <140>;
+	lcd_ht              = <1344>;
+	lcd_hspw            = <20>;
+	lcd_vbp             = <20>;
+	lcd_vt              = <635>;
+	lcd_vspw            = <3>;
+		
+	lcd_pwm_used        = <1>;
+	lcd_pwm_ch          = <7>;
+	lcd_pwm_freq        = <500>;
+	lcd_pwm_pol         = <1>;
+
+	/* part 5 */
+	lcd_frm = <1>;
+	lcd_io_phase = <0x0000>;
+	lcd_gamma_en = <0>;
+	lcd_cmap_en = <0>;
+	lcd_hv_clk_phase = <0>;
+	lcd_hv_sync_polarity= <0>;
+				
+	/* part 6 */
+	lcd_power = "vcc-lcd";
+	lcd_pin_power = "vcc-pd";
+	pinctrl-0 = <&rgb18_pins_a>;
+	pinctrl-1 = <&rgb18_pins_b>;
+};
+
+/*
+&lcd0 {
 	lcd_used            = <1>;
 	lcd_driver_name     = "st7701s_3spi";
 
@@ -1368,7 +1436,7 @@ pull up or pull down(default 0), driver level(default 1), data>
 	pinctrl-0 = <&rgb18_pins_a>;
 	pinctrl-1 = <&rgb18_pins_b>;
 };
-
+*/
 /*
 tvd configuration
 used                   (create device, 0: do not create device, 1: create device)
@@ -1430,7 +1498,6 @@ tvd_row*tvd_column is the total tvd channel number to be used in multichannel mo
 	cagc_enable             = <1>;
 	fliter_used             = <1>;
 };
-
 &i2s0_plat {
 	tdm-num		= <0>;
 	tx-pin		= <0>;
@@ -1683,7 +1750,6 @@ tvd_row*tvd_column is the total tvd channel number to be used in multichannel mo
 	pinctrl-1 = <&pwm7_pin_b>;
 	status = "okay";
 };
-
 &gpadc {
 	channel_num = <1>;
 	channel_select = <0x1>;
@@ -1691,11 +1757,11 @@ tvd_row*tvd_column is the total tvd channel number to be used in multichannel mo
 	channel_compare_select = <0x1>;
 	channel_cld_select = <0x1>;
 	channel_chd_select = <0>;
-	channel0_compare_lowdata = <1100000>;
-	channel0_compare_higdata = <120000>;
+	channel0_compare_lowdata = <1700000>;
+	channel0_compare_higdata = <1200000>;
 	channel1_compare_lowdata = <460000>;
 	channel1_compare_higdata = <1200000>;
-	key_cnt = <5>;
+	key_cnt = <4>;
 	key0_vol = <210>;
 	key0_val = <115>;
 	key1_vol = <410>;
@@ -1704,9 +1770,6 @@ tvd_row*tvd_column is the total tvd channel number to be used in multichannel mo
 	key2_val = <119>;
 	key3_vol = <750>;
 	key3_val = <373>;
-	key4_vol = <880>;
-	key4_val = <28>;
-	wakeup-source;
 	status = "okay";
 };
 

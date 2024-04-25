@@ -5,6 +5,7 @@
 CONFIG_MODULES=y
 CONFIG_HAVE_DOT_CONFIG=y
 CONFIG_TARGET_t113_s4_100ask_devkit_nand=y
+# CONFIG_TARGET_t113_s4_awol_evb1 is not set
 CONFIG_TARGET_t113_s4_100ask_devkit_nand_Default=y
 CONFIG_TARGET_BOARD="t113_s4-100ask_devkit_nand"
 CONFIG_TARGET_SUBTARGET="generic"
@@ -2350,7 +2351,24 @@ CONFIG_PACKAGE_dnsmasq=y
 # CONFIG_PACKAGE_dnsmasq-full is not set
 # CONFIG_PACKAGE_dropbear is not set
 # CONFIG_PACKAGE_ead is not set
-# CONFIG_PACKAGE_eudev is not set
+CONFIG_PACKAGE_eudev=y
+
+#
+# Configuration
+#
+CONFIG_EUDEV_EXTRA_ata_id=y
+CONFIG_EUDEV_EXTRA_blkid=y
+CONFIG_EUDEV_EXTRA_cdrom_id=y
+# CONFIG_EUDEV_EXTRA_collect is not set
+CONFIG_EUDEV_EXTRA_input_id=y
+# CONFIG_EUDEV_EXTRA_kmod is not set
+CONFIG_EUDEV_EXTRA_mtd_probe=y
+# CONFIG_EUDEV_EXTRA_rule_generator is not set
+CONFIG_EUDEV_EXTRA_scsi_id=y
+CONFIG_EUDEV_EXTRA_v4l_id=y
+CONFIG_EUDEV_EXTRA_largefile=y
+# end of Configuration
+
 # CONFIG_PACKAGE_firewall is not set
 CONFIG_PACKAGE_fstools=y
 # CONFIG_FSTOOLS_OVL_MOUNT_FULL_ACCESS_TIME is not set
@@ -2553,7 +2571,7 @@ CONFIG_SUNXI_ALLOC_IOMMU=y
 CONFIG_LUAPI_LAYER_ALLOC_LAY=y
 CONFIG_SUNXI_DISPLAY_DE=y
 # CONFIG_SUNXI_DISPLAY_GPU is not set
-# CONFIG_SUPPORT_CONFIG_FILE is not set
+CONFIG_SUPPORT_CONFIG_FILE=y
 # CONFIG_PACKAGE_pqd is not set
 # CONFIG_PACKAGE_yuview is not set
 # end of Display
@@ -2592,7 +2610,7 @@ CONFIG_CEDAR_VDECODER_MPEG4BASE=y
 CONFIG_CEDAR_VDECODER_MPEG4DX=y
 CONFIG_CEDAR_VDECODER_MPEG4H263=y
 CONFIG_CEDAR_VDECODER_MPEG4NORMAL=y
-# CONFIG_CEDAR_VDECODER_MPEG4VP6 is not set
+CONFIG_CEDAR_VDECODER_MPEG4VP6=y
 # CONFIG_CEDAR_VDECODER_VP8 is not set
 # CONFIG_CEDAR_VDECODER_VP9 is not set
 CONFIG_CEDAR_VDECODER_WMV3=y
@@ -2753,11 +2771,11 @@ CONFIG_PACKAGE_vencoderDemo=y
 #
 # Other
 #
-# CONFIG_PACKAGE_ir_test is not set
-# CONFIG_PACKAGE_libsocket_db is not set
-# CONFIG_PACKAGE_uart_test is not set
-# CONFIG_PACKAGE_uevent-monitor is not set
-# CONFIG_PACKAGE_uevent-monitor-for-rproc_wdt is not set
+CONFIG_PACKAGE_ir_test=y
+CONFIG_PACKAGE_libsocket_db=y
+CONFIG_PACKAGE_uart_test=y
+CONFIG_PACKAGE_uevent-monitor=y
+CONFIG_PACKAGE_uevent-monitor-for-rproc_wdt=y
 # end of Other
 
 #
@@ -2785,7 +2803,7 @@ CONFIG_C_CODE=y
 # CONFIG_PACKAGE_parallel_insmod is not set
 # CONFIG_PACKAGE_ramparser is not set
 # CONFIG_PACKAGE_rpbuf_demo is not set
-CONFIG_PACKAGE_rpbuf_test=y
+# CONFIG_PACKAGE_rpbuf_test is not set
 # CONFIG_PACKAGE_rpmsg_demo is not set
 CONFIG_PACKAGE_rpmsg_test=y
 # CONFIG_PACKAGE_swupdate is not set
@@ -3115,7 +3133,7 @@ CONFIG_PACKAGE_lv_monitor=y
 # CONFIG_PACKAGE_qt-textures is not set
 # CONFIG_PACKAGE_qt-washing-machine is not set
 # CONFIG_PACKAGE_qt5-core is not set
-CONFIG_QT5_USE_PREBUILT=y
+# CONFIG_QT5_USE_PREBUILT is not set
 # end of Qt
 # end of Gui
 
@@ -4772,7 +4790,7 @@ CONFIG_PACKAGE_libxtables=y
 #
 # CONFIG_PACKAGE_libgnutls is not set
 # CONFIG_PACKAGE_libmbedtls is not set
-# CONFIG_PACKAGE_libnss is not set
+CONFIG_PACKAGE_libnss=y
 CONFIG_PACKAGE_libopenssl=y
 
 #
@@ -4833,7 +4851,19 @@ CONFIG_OPENSSL_WITH_PSK=y
 #
 # database
 #
-# CONFIG_PACKAGE_libsqlite3 is not set
+CONFIG_PACKAGE_libsqlite3=y
+
+#
+# Configuration
+#
+CONFIG_SQLITE3_DYNAMIC_EXTENSIONS=y
+CONFIG_SQLITE3_FTS3=y
+CONFIG_SQLITE3_FTS4=y
+CONFIG_SQLITE3_FTS5=y
+CONFIG_SQLITE3_JSON1=y
+CONFIG_SQLITE3_RTREE=y
+# CONFIG_SQLITE3_SESSION is not set
+# end of Configuration
 # end of database
 
 #
@@ -4957,8 +4987,8 @@ CONFIG_PACKAGE_libdbus=y
 # CONFIG_PACKAGE_libelf is not set
 # CONFIG_PACKAGE_libesmtp is not set
 # CONFIG_PACKAGE_libestr is not set
-# CONFIG_PACKAGE_libev is not set
-# CONFIG_PACKAGE_libevdev is not set
+CONFIG_PACKAGE_libev=y
+CONFIG_PACKAGE_libevdev=y
 # CONFIG_PACKAGE_libevent2 is not set
 # CONFIG_PACKAGE_libevent2-core is not set
 # CONFIG_PACKAGE_libevent2-extra is not set
@@ -5011,7 +5041,7 @@ CONFIG_PACKAGE_libical=y
 # CONFIG_PACKAGE_libidn2 is not set
 # CONFIG_PACKAGE_libiio is not set
 # CONFIG_PACKAGE_libinotifytools is not set
-# CONFIG_PACKAGE_libinput is not set
+CONFIG_PACKAGE_libinput=y
 # CONFIG_PACKAGE_libintl is not set
 # CONFIG_PACKAGE_libintl-full is not set
 # CONFIG_PACKAGE_libion is not set
@@ -5084,7 +5114,7 @@ CONFIG_PACKAGE_libnl-tiny=y
 # CONFIG_PACKAGE_libopensc is not set
 # CONFIG_PACKAGE_libopenzwave is not set
 # CONFIG_PACKAGE_liboping is not set
-# CONFIG_PACKAGE_libopus is not set
+CONFIG_PACKAGE_libopus=y
 # CONFIG_PACKAGE_libopusenc is not set
 # CONFIG_PACKAGE_libopusfile is not set
 # CONFIG_PACKAGE_liborcania is not set
@@ -5222,7 +5252,7 @@ CONFIG_PACKAGE_libuuid=y
 # CONFIG_PACKAGE_libv4l is not set
 # CONFIG_PACKAGE_libvorbis is not set
 # CONFIG_PACKAGE_libvorbisidec is not set
-# CONFIG_PACKAGE_libvpx is not set
+CONFIG_PACKAGE_libvpx=y
 # CONFIG_PACKAGE_libwebp is not set
 # CONFIG_PACKAGE_libwebsockets-full is not set
 # CONFIG_PACKAGE_libwebsockets-mbedtls is not set
@@ -5231,8 +5261,8 @@ CONFIG_PACKAGE_libuuid=y
 # CONFIG_PACKAGE_libx264 is not set
 # CONFIG_PACKAGE_libxerces-c is not set
 # CONFIG_PACKAGE_libxerces-c-samples is not set
-# CONFIG_PACKAGE_libxkbcommon is not set
-# CONFIG_PACKAGE_libxml2 is not set
+CONFIG_PACKAGE_libxkbcommon=y
+CONFIG_PACKAGE_libxml2=y
 # CONFIG_PACKAGE_libxslt is not set
 # CONFIG_PACKAGE_libyaml-cpp is not set
 # CONFIG_PACKAGE_libyang is not set
@@ -5247,10 +5277,10 @@ CONFIG_PACKAGE_libuuid=y
 # CONFIG_PACKAGE_lttng-ust is not set
 # CONFIG_PACKAGE_minizip is not set
 # CONFIG_PACKAGE_msgpack-c is not set
-# CONFIG_PACKAGE_mtdev is not set
+CONFIG_PACKAGE_mtdev=y
 # CONFIG_PACKAGE_musl-fts is not set
 # CONFIG_PACKAGE_mxml is not set
-# CONFIG_PACKAGE_nspr is not set
+CONFIG_PACKAGE_nspr=y
 # CONFIG_PACKAGE_oniguruma is not set
 # CONFIG_PACKAGE_open-isns is not set
 # CONFIG_PACKAGE_opencv is not set
@@ -5265,7 +5295,7 @@ CONFIG_PACKAGE_sbc=y
 # CONFIG_PACKAGE_serdisplib is not set
 # CONFIG_PACKAGE_spdlog is not set
 CONFIG_PACKAGE_terminfo=y
-# CONFIG_PACKAGE_tinyalsa-lib is not set
+CONFIG_PACKAGE_tinyalsa-lib=y
 # CONFIG_PACKAGE_tinycdb is not set
 # CONFIG_PACKAGE_tinyxml is not set
 # CONFIG_PACKAGE_tinyxml2 is not set
@@ -5300,7 +5330,7 @@ CONFIG_TSLIB_ENABLE_variance=y
 # CONFIG_PACKAGE_uclibcxx is not set
 # CONFIG_PACKAGE_uw-imap is not set
 # CONFIG_PACKAGE_x264 is not set
-# CONFIG_PACKAGE_xkeyboard-config is not set
+CONFIG_PACKAGE_xkeyboard-config=y
 # CONFIG_PACKAGE_xmlrpc-c is not set
 # CONFIG_PACKAGE_xmlrpc-c-client is not set
 # CONFIG_PACKAGE_xmlrpc-c-server is not set
@@ -6646,7 +6676,7 @@ CONFIG_PACKAGE_xr829-rftest=y
 # end of rtk_hciattach
 
 # CONFIG_PACKAGE_acpid is not set
-# CONFIG_PACKAGE_adb is not set
+CONFIG_PACKAGE_adb=y
 # CONFIG_PACKAGE_airos-dfs-reset is not set
 # CONFIG_PACKAGE_ap51-flash is not set
 # CONFIG_PACKAGE_apk is not set
@@ -6686,8 +6716,8 @@ CONFIG_PACKAGE_canutils=y
 # CONFIG_PACKAGE_canutils-can-calc-bit-timing is not set
 # CONFIG_PACKAGE_canutils-canbusload is not set
 CONFIG_PACKAGE_canutils-candump=y
-# CONFIG_PACKAGE_canutils-canfdtest is not set
-# CONFIG_PACKAGE_canutils-cangen is not set
+CONFIG_PACKAGE_canutils-canfdtest=y
+CONFIG_PACKAGE_canutils-cangen=y
 # CONFIG_PACKAGE_canutils-cangw is not set
 # CONFIG_PACKAGE_canutils-canlogserver is not set
 # CONFIG_PACKAGE_canutils-canplayer is not set
@@ -6747,7 +6777,7 @@ CONFIG_PACKAGE_dbus=y
 # CONFIG_PACKAGE_dump1090 is not set
 # CONFIG_PACKAGE_ecdsautils is not set
 # CONFIG_PACKAGE_elektra-kdb is not set
-# CONFIG_PACKAGE_evtest is not set
+CONFIG_PACKAGE_evtest=y
 # CONFIG_PACKAGE_extract is not set
 # CONFIG_PACKAGE_fbtest is not set
 # CONFIG_PACKAGE_fdt-utils is not set
@@ -6761,7 +6791,7 @@ CONFIG_PACKAGE_dbus=y
 # CONFIG_PACKAGE_flashrom-spi is not set
 # CONFIG_PACKAGE_flashrom-usb is not set
 # CONFIG_PACKAGE_flock is not set
-# CONFIG_PACKAGE_fontconfig is not set
+CONFIG_PACKAGE_fontconfig=y
 # CONFIG_PACKAGE_fritz-caldata is not set
 # CONFIG_PACKAGE_fritz-tffs is not set
 # CONFIG_PACKAGE_fritz-tffs-nand is not set
@@ -6984,7 +7014,7 @@ CONFIG_STRACE_NONE=y
 # CONFIG_PACKAGE_temperusb is not set
 # CONFIG_PACKAGE_tesseract is not set
 # CONFIG_PACKAGE_tini is not set
-# CONFIG_PACKAGE_tinyalsa-utils is not set
+CONFIG_PACKAGE_tinyalsa-utils=y
 # CONFIG_PACKAGE_tinyionice is not set
 # CONFIG_PACKAGE_tracertools is not set
 # CONFIG_PACKAGE_tree is not set
