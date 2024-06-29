@@ -3106,16 +3106,16 @@ CONFIG_PACKAGE_directfb-examples=y
 #
 # Littlevgl
 #
-CONFIG_PACKAGE_lv_86_boxes=y
-CONFIG_PACKAGE_lv_examples=y
-CONFIG_LVGL8_USE_SUNXIFB_DOUBLE_BUFFER=y
-CONFIG_LVGL8_USE_SUNXIFB_CACHE=y
-CONFIG_LVGL8_USE_SUNXIFB_G2D=y
-CONFIG_LVGL8_USE_SUNXIFB_G2D_ROTATE=y
-CONFIG_LVGL8_USE_FREETYPE=y
-CONFIG_LVGL8_USE_SUNXIFB_DIRECT_MODE=y
-CONFIG_PACKAGE_lv_g2d_test=y
-CONFIG_PACKAGE_lv_monitor=y
+# CONFIG_PACKAGE_lv_86_boxes is not set
+# CONFIG_PACKAGE_lv_examples is not set
+# CONFIG_LVGL8_USE_SUNXIFB_DOUBLE_BUFFER is not set
+# CONFIG_LVGL8_USE_SUNXIFB_CACHE is not set
+# CONFIG_LVGL8_USE_SUNXIFB_G2D is not set
+# CONFIG_LVGL8_USE_SUNXIFB_G2D_ROTATE is not set
+# CONFIG_LVGL8_USE_FREETYPE is not set
+# CONFIG_LVGL8_USE_SUNXIFB_DIRECT_MODE is not set
+# CONFIG_PACKAGE_lv_g2d_test is not set
+# CONFIG_PACKAGE_lv_monitor is not set
 # end of Littlevgl
 
 #
@@ -3129,11 +3129,78 @@ CONFIG_PACKAGE_lv_monitor=y
 #
 # Qt
 #
-# CONFIG_PACKAGE_qt-easing is not set
+CONFIG_PACKAGE_qt-easing=y
 # CONFIG_PACKAGE_qt-textures is not set
-# CONFIG_PACKAGE_qt-washing-machine is not set
-# CONFIG_PACKAGE_qt5-core is not set
-# CONFIG_QT5_USE_PREBUILT is not set
+CONFIG_PACKAGE_qt-washing-machine=y
+CONFIG_PACKAGE_qt5-core=y
+CONFIG_QT5_USE_PREBUILT=y
+# CONFIG_PACKAGE_qt5-3d is not set
+# CONFIG_PACKAGE_qt5-bluetooth is not set
+# CONFIG_PACKAGE_qt5-charts is not set
+CONFIG_PACKAGE_qt5-clucene=y
+# CONFIG_PACKAGE_qt5-concurrent is not set
+# CONFIG_PACKAGE_qt5-datavis3d is not set
+CONFIG_PACKAGE_qt5-dbus=y
+# CONFIG_PACKAGE_qt5-drivers-audio is not set
+CONFIG_PACKAGE_qt5-drivers-customwidget=y
+CONFIG_PACKAGE_qt5-drivers-imageformats=y
+CONFIG_PACKAGE_qt5-drivers-keyboard=y
+CONFIG_PACKAGE_qt5-drivers-libinput=y
+CONFIG_PACKAGE_qt5-drivers-linuxfb=y
+CONFIG_PACKAGE_qt5-drivers-mouse=y
+CONFIG_PACKAGE_qt5-drivers-touchscreen=y
+# CONFIG_PACKAGE_qt5-drivers-worldtimeclock is not set
+CONFIG_PACKAGE_qt5-enginio=y
+# CONFIG_PACKAGE_qt5-examples is not set
+CONFIG_PACKAGE_qt5-gamepad=y
+# CONFIG_PACKAGE_qt5-graphicaleffects is not set
+# CONFIG_PACKAGE_qt5-gsttools is not set
+CONFIG_PACKAGE_qt5-gui=y
+CONFIG_PACKAGE_qt5-help=y
+# CONFIG_PACKAGE_qt5-labstemplates is not set
+CONFIG_PACKAGE_qt5-location=y
+# CONFIG_PACKAGE_qt5-multimedia is not set
+CONFIG_PACKAGE_qt5-network=y
+CONFIG_PACKAGE_qt5-nfc=y
+# CONFIG_PACKAGE_qt5-opengl is not set
+CONFIG_PACKAGE_qt5-positioning=y
+CONFIG_PACKAGE_qt5-printsupport=y
+# CONFIG_PACKAGE_qt5-purchasing is not set
+CONFIG_PACKAGE_qt5-qml=y
+CONFIG_PACKAGE_qt5-quick=y
+CONFIG_PACKAGE_qt5-quick-2=y
+CONFIG_PACKAGE_qt5-quick-controls=y
+CONFIG_PACKAGE_qt5-quick-controls-2=y
+CONFIG_PACKAGE_qt5-quick-dialogs=y
+CONFIG_PACKAGE_qt5-quick-extras=y
+CONFIG_PACKAGE_qt5-quick-layouts=y
+CONFIG_PACKAGE_qt5-quick-localstorage=y
+# CONFIG_PACKAGE_qt5-quick-particles is not set
+CONFIG_PACKAGE_qt5-quick-privatewidgets=y
+# CONFIG_PACKAGE_qt5-quick-scene3d is not set
+CONFIG_PACKAGE_qt5-quick-window=y
+CONFIG_PACKAGE_qt5-quick-xmllistmodel=y
+# CONFIG_PACKAGE_qt5-quickparticles is not set
+CONFIG_PACKAGE_qt5-quickwidgets=y
+CONFIG_PACKAGE_qt5-remoteobjects=y
+CONFIG_PACKAGE_qt5-script=y
+CONFIG_PACKAGE_qt5-scripttools=y
+# CONFIG_PACKAGE_qt5-scxml is not set
+CONFIG_PACKAGE_qt5-sensors=y
+CONFIG_PACKAGE_qt5-serialbus=y
+CONFIG_PACKAGE_qt5-serialport=y
+CONFIG_PACKAGE_qt5-speech=y
+CONFIG_PACKAGE_qt5-sql=y
+CONFIG_PACKAGE_qt5-svg=y
+CONFIG_PACKAGE_qt5-test=y
+# CONFIG_PACKAGE_qt5-wayland is not set
+CONFIG_PACKAGE_qt5-webchannel=y
+# CONFIG_PACKAGE_qt5-webengine is not set
+CONFIG_PACKAGE_qt5-websocket=y
+CONFIG_PACKAGE_qt5-webview=y
+CONFIG_PACKAGE_qt5-widgets=y
+CONFIG_PACKAGE_qt5-xml=y
+CONFIG_PACKAGE_qt5-xmlpatterns=y
 # end of Qt
 # end of Gui
 
@@ -5034,8 +5101,8 @@ CONFIG_PACKAGE_libfreetype=y
 # CONFIG_PACKAGE_libhwloc is not set
 CONFIG_PACKAGE_libi2c=y
 CONFIG_PACKAGE_libical=y
-# CONFIG_PACKAGE_libiconv is not set
-# CONFIG_PACKAGE_libiconv-full is not set
+CONFIG_PACKAGE_libiconv=y
+CONFIG_PACKAGE_libiconv-full=y
 # CONFIG_PACKAGE_libid3tag is not set
 # CONFIG_PACKAGE_libidn is not set
 # CONFIG_PACKAGE_libidn2 is not set
