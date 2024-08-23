@@ -20,4 +20,4 @@
 # In particular, you can add lunch options with the add_lunch_combo
 # function: add_lunch_combo generic-eng
 
-add_lunch_combo t113_s4_100ask_devkit_nand-tina
+add_lunch_combo t113_s4-100ask_devkit_nand-tina
