@@ -59,10 +59,15 @@ size = 16384
 
 [partition]
     name         = rootfs
-    size         = 104857
+    size         = 84857
     downloadfile = "rootfs.fex"
     user_type    = 0x8000
 
+[partition]
+    name         = recovery
+    size         = 61440
+   ;downloadfile = "recovery.fex"
+    user_type    = 0x8000
 [partition]
     name         = dsp0
     size         = 2048
