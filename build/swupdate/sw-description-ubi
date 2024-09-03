@@ -35,10 +35,10 @@ software =
                 },
                 {
                     name = "bootcmd";
-                    value = "run setargs_nand_ubi boot_recovery";
+                    value = "run setargs_ramfs boot_recovery";
                 },
                 {
-                    name = "setargs_nand_ubi";
+                    name = "setargs_ramfs";
                     value = "setenv  bootargs  partitions=${partitions} ubi.mtd=${mtd_name} ubi.block=0,${root_partition} earlycon=${earlycon} clk_ignore_unused initcall_debug=${initcall_debug} console=${console} loglevel=${loglevel} init=${init} ";
                 },                
                 {
@@ -76,11 +76,7 @@ software =
                 {
                     name = "bootcmd";
                     value = "run setargs_nand_ubi boot_normal";
-                },
-                {
-                    name = "setargs_nand_ubi";
-		    value = "setenv bootargs partitions=${partitions} ubi.mtd=${mtd_name} ubi.block=0,${root_partition} earlyprintk=${earlyprintk} clk_ignore_unused initcall_debug=${initcall_debug} console=${console} loglevel=${loglevel} root=${nand_root} rootfstype=${rootfstype} init=${init} rdinit=${rdinit} cma=${cma} snum=${snum} mac_addr=${mac} wifi_mac=${wifi_mac} bt_mac=${bt_mac} specialstr=${specialstr} gpt=1";
-                }                
+                }
             );
         };
 
