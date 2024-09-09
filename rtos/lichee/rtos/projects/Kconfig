@@ -1,0 +1,379 @@
+choice
+    prompt "Configure Application"
+    default PROJECT_R328S1_EVB1_DEMO
+
+config PROJECT_R328S1_EVB1
+    bool "r328s1 evb1 demo application"
+	select PROJECT_R328S1
+    ---help---
+        the r328s1 application include common components
+
+config PROJECT_R328S1_EVB1_XR819S
+    bool "r328s1 evb1 xr819s application"
+	select PROJECT_R328S1
+    ---help---
+        the r328s1 application include common components
+
+config PROJECT_R528S3_EVB3
+    bool "r528s3 evb3 demo application"
+	select PROJECT_R528S3
+    ---help---
+        the r528s3 application include common components
+
+config PROJECT_R528S3_EVB3_NAND
+    bool "r528s3 evb3 nand demo application"
+	select PROJECT_R528S3
+    ---help---
+        the r528s3 application include common components
+
+config PROJECT_R128S2_MINI_M33
+    bool "r128s2 mini m33 system"
+	select PROJECT_R128S2
+    ---help---
+        r128s2 mini m33 system
+
+config PROJECT_R128S2_VER_M33
+    bool "r128s2 ver m33 system"
+	select PROJECT_R128S2
+    ---help---
+        r128s2 ver m33 system
+
+config PROJECT_R128S2_WLAN_BT_M33
+    bool "r128s2 wlan bt m33 system"
+	select PROJECT_R128S2
+    ---help---
+        r128s2 wlan bt m33 system
+
+config PROJECT_R128S2_EVB1_M33
+    bool "r128s2 evb1 m33 system"
+	select PROJECT_R128S2
+    ---help---
+        r128s2 evb1 m33 system
+
+config PROJECT_R128S2_EVB1_C906
+    bool "r128s2 evb1 c906 system"
+	select PROJECT_R128S2
+    ---help---
+        r128s2 evb1 c906 system
+
+config PROJECT_R128S2_PRO_M33
+    bool "r128s2 pro m33 system"
+	select PROJECT_R128S2
+    ---help---
+        r128s2 pro m33 system
+
+config PROJECT_R128S2_PRO_C906
+    bool "r128s2 pro c906 system"
+	select PROJECT_R128S2
+    ---help---
+        r128s2 pro c906 system
+
+config PROJECT_R128S1_PRO_M33
+    bool "r128s1 pro m33 system"
+	select PROJECT_R128S1
+    ---help---
+        r128s1 pro m33 system
+
+config PROJECT_R128S1_PRO_C906
+    bool "r128s1 pro c906 system"
+	select PROJECT_R128S1
+    ---help---
+        r128s1 pro c906 system
+
+config PROJECT_R128S3_EVB1_M33
+    bool "r128s3 evb1 m33 system"
+	select PROJECT_R128S3
+    ---help---
+        r128s3 evb1 m33 system
+
+config PROJECT_R128S3_EVB1_C906
+    bool "r128s3 evb1 c906 system"
+	select PROJECT_R128S3
+    ---help---
+        r128s3 evb1 c906 system
+
+config PROJECT_R128S3_PRO_M33
+    bool "r128s3 pro m33 system"
+	select PROJECT_R128S3
+    ---help---
+        r128s3 pro m33 system
+
+config PROJECT_R128S3_PRO_C906
+    bool "r128s3 pro c906 system"
+	select PROJECT_R128S3
+    ---help---
+        r128s3 pro c906 system
+
+config PROJECT_R128S3_PRO_RGB_M33
+    bool "r128s3 pro rgb m33 system"
+	select PROJECT_R128S3
+    ---help---
+        r128s3 pro rgb nand m33 system
+
+config PROJECT_R128S3_PRO_RGB_C906
+    bool "r128s3 pro rgb c906 system"
+	select PROJECT_R128S3
+    ---help---
+        r128s3 pro rgb nand c906 system
+
+config PROJECT_R128S3_EVB1_NAND_M33
+    bool "r128s3 nand evb1 m33 system"
+	select PROJECT_R128S3
+    ---help---
+        r128s3 nand evb1 m33 system
+
+config PROJECT_R128S3_EVB1_NAND_C906
+    bool "r128s3 nand evb1 c906 system"
+	select PROJECT_R128S3
+    ---help---
+        r128s3 nand evb1 c906 system
+
+config PROJECT_XR875_EVB1_M33
+    bool "xr875 evb1 m33 system"
+	select PROJECT_XR875
+    ---help---
+        xr875 evb1 m33 system
+
+config PROJECT_XR875_EVB1_C906
+    bool "xr875 evb1 C906 system"
+	select PROJECT_XR875
+    ---help---
+        xr875 evb1 C906 system
+
+config PROJECT_XR875_PRO_M33
+    bool "xr875 pro m33 system"
+	select PROJECT_XR875
+    ---help---
+        xr875 pro m33 system
+
+config PROJECT_XR875_PRO_C906
+    bool "xr875 pro C906 system"
+	select PROJECT_XR875
+    ---help---
+        xr875 pro C906 system
+
+config PROJECT_XR875_MINI_M33
+    bool "xr875 mini m33 system"
+	select PROJECT_XR875
+    ---help---
+        xr875 m33 mini system
+
+config PROJECT_XR875S1_PRO_M33
+    bool "xr875s1 pro m33 system"
+	select PROJECT_XR875S1
+    ---help---
+        xr875s1 pro m33 system
+
+config PROJECT_XR875S1_PRO_C906
+    bool "xr875s1 pro C906 system"
+	select PROJECT_XR875S1
+    ---help---
+        xr875s1 pro C906 system
+
+config PROJECT_A523_E906_MINI
+    bool "a523 e906 min system"
+	select PROJECT_A523_E906
+    ---help---
+        a523 e906 min system
+
+config PROJECT_XR875_EVB1_NAND_M33
+    bool "xr875 nand evb1 m33 system"
+	select PROJECT_XR875
+    ---help---
+        xr875 nand evb1 m33 system
+
+config PROJECT_T736_E906_MINI
+	bool "t736 e906 min system"
+	select PROJECT_T736_E906
+	---help---
+		t736 e906 min system
+
+config PROJECT_MR527_E906_EVB
+	bool "mr527 e906 evb system"
+	select PROJECT_MR527_E906
+	---help---
+		mr527 e906 evb system
+
+config PROJECT_MR527_E906_PRO1
+	bool "mr527 e906 pro system"
+	select PROJECT_MR527_E906
+	---help---
+		mr527 e906 pro1 system
+
+config PROJECT_AI985_E906_EVB
+    bool "ai985 e906 evb system"
+	select PROJECT_AI985_E906
+    ---help---
+        ai985 e906 evb system
+
+config PROJECT_AI985_E906_SCANP_FASTBOOT
+    bool "ai985 e906 scanp fastboot system"
+	select PROJECT_AI985_E906
+    ---help---
+        ai985 e906 scanp fastboot system
+
+config PROJECT_T527_E906_DEMO
+	bool "t527 e906 demo system"
+	select PROJECT_T527_E906
+	---help---
+		t527 e906 demo system
+
+config PROJECT_T527_E906_DEMO_FASTBOOT
+	bool "t527 e906 demo fastboot system"
+	select PROJECT_T527_E906
+	---help---
+		t527 e906 demo fastboot system
+
+config PROJECT_T527_E906_DEMO_FASTBOOT_ANDROID
+	bool "t527 e906 demo fastboot android system"
+	select PROJECT_T527_E906
+	---help---
+		t527 e906 demo fastboot android system
+
+config PROJECT_T113_C906_EVB1
+	bool "t113 c906 evb1 system"
+	select PROJECT_T113_C906
+	---help---
+		t113 c906 evb1 system
+
+config PROJECT_T113_C906_EVB1_AUTO
+	bool "t113 c906 evb1 auto system"
+	select PROJECT_T113_C906
+	---help---
+		t113 c906 evb1 auto system
+
+config PROJECT_T113_I_C906_EVB1_AUTO
+	bool "t113-i c906 evb1 auto system"
+	select PROJECT_T113_I_C906
+	---help---
+		t113-i c906 evb1 auto system
+
+config PROJECT_T113_I_C906_EVB1_AUTO_FASTBOOT_VIDEO
+	bool "t113-i c906 evb1 auto fastboot video system"
+	select PROJECT_T113_I_C906
+	---help---
+		t113-i c906 evb1 auto fastboot video system
+
+config PROJECT_T113_S3P_C906_EVB1_AUTO
+	bool "t113-s3p c906 evb1 auto system"
+	select PROJECT_T113_S3P_C906
+	---help---
+		t113-s3p c906 evb1 auto system
+
+config PROJECT_T113_S3P_C906_EVB1_AUTO_FASTBOOT
+	bool "t113-s3p c906 evb1 auto fastboot system"
+	select PROJECT_T113_S3P_C906
+	---help---
+		t113-s3p c906 evb1 auto fastboot system
+
+config PROJECT_T113_S3P_C906_EVB1_AUTO_FASTBOOT_VIDEO
+	bool "t113-s3p c906 evb1 auto fastboot video system"
+	select PROJECT_T113_S3P_C906
+	---help---
+		t113-s3p c906 evb1 auto fastboot video system
+
+config PROJECT_T113_S3P_C906_EVB1_AUTO_NON_OS
+	bool "t113-s3p c906 evb1 auto non os system"
+	select PROJECT_T113_S3P_C906
+	---help---
+		t113-s3p c906 evb1 auto non os system
+
+config PROJECT_T113_S3P_C906_EXAMPLE_DEMO
+	bool "t113-s3p c906 example demo system"
+	select PROJECT_T113_S3P_C906
+	---help---
+		t113-s3p c906 example demo system
+
+config PROJECT_T113_S4P_C906_EVB1_AUTO
+	bool "t113-s4p c906 evb1 auto system"
+	select PROJECT_T113_S4P_C906
+	---help---
+		t113-s4p c906 evb1 auto system
+
+config PROJECT_T113_S4_C906_EVB1_AUTO
+	bool "t113-s4 c906 evb1 auto system"
+	select PROJECT_T113_S4_C906
+	---help---
+		t113-s4 c906 evb1 auto system
+
+config PROJECT_T113_S4_C906_EVB1_AUTO_FASTBOOT_VIDEO
+	bool "t113-s4 c906 evb1 auto fastboot video system"
+	select PROJECT_T113_S4_C906
+	---help---
+		t113-s4 c906 evb1 auto fastboot video system
+
+config PROJECT_TI533_E907_DEMO
+	bool "ti533 e907 demo system"
+	select PROJECT_TI533_E907
+	---help---
+		ti533 e907 demo system
+
+endchoice
+
+config PROJECT_R128S2
+    bool
+
+config PROJECT_R128S1
+    bool
+
+config PROJECT_R128S3
+    bool
+
+config PROJECT_XR875
+    bool
+
+config PROJECT_XR875S1
+    bool
+
+config PROJECT_A523_E906
+    bool
+
+config PROJECT_R328S1
+    bool
+
+config PROJECT_T736_E906
+	bool
+
+config PROJECT_R528S3
+    bool
+
+config PROJECT_MR527_E906
+	bool
+
+config PROJECT_AI985_E906
+    bool
+
+config PROJECT_T527_E906
+    bool
+
+config PROJECT_T113_C906
+    bool
+
+config PROJECT_T113_I_C906
+    bool
+
+config PROJECT_T113_S3P_C906
+    bool
+
+config PROJECT_T113_S4P_C906
+    bool
+
+config PROJECT_T113_S4_C906
+    bool
+
+config PROJECT_TI533_E907
+    bool
+
+config PLATFORM_FPGA
+    bool "Run on fpga"
+    default n
+
+config PROJECT_TESTCASE
+    bool "Project Testcase"
+    default n
+
+config NON_OS
+    bool "non os demo"
+    default n
+    depends on PROJECT_T113_S3P_C906_EVB1_AUTO_NON_OS
+
