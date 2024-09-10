@@ -252,7 +252,7 @@ CONFIG_DRIVERS_GPIO=y
 #
 # DMA Devices
 #
-CONFIG_DRIVERS_DMA=y
+# CONFIG_DRIVERS_DMA is not set
 # CONFIG_HAL_TEST_DMA is not set
 
 #
